@@ -10,7 +10,7 @@ public class hangMan {
         // Declaration of the Linked List Object to hold the words
         LinkedList listy = new LinkedList();
 
-        // Filling the Linked List with words
+        // Filling the Linked List with words via a function
         fillList(listy);
 
 
@@ -147,7 +147,10 @@ public class hangMan {
 
 
     }
-    // This function just prints out the array
+    /* 
+    This function prints out an array
+    @param char [] array, this is the array of blank spaces and characters that have been guessed
+    */
     public static void printArray(char[] array) {
 
         for (int i = 0; i < array.length; i++) {
@@ -157,7 +160,11 @@ public class hangMan {
         System.out.println();
     }
 
-    // Fill in the underscores char array
+    /* 
+    We check to see if all characters of the word have been found
+    @param char [] array, this is the array of characters of the word to be guessed
+    @return boolean which indicates whether the word has been guessed correctly or not
+    */
     public static boolean isthewordguessed(char[] array) {
 
 
@@ -172,8 +179,11 @@ public class hangMan {
         return true;
 
     }
-    // Fill the linked list with words
-    public static void fillList(LinkedList listy){
+    	/*
+	Fill the linked list with words
+	@param listy, this is the linked list that hold the dictionary of words that the computer can pick
+	*/
+	public static void fillList(LinkedList listy){
 
         listy.insert("javascript");
         listy.insert("kotlin");
@@ -196,7 +206,10 @@ class LinkedList {
     int size;
 
 
-    // Insert a node. Automatically the first one is the head and others follow
+    /*
+    Insert a node. Automatically the first one is the head and others follow
+    @param data, this is the piece of data to be added to the linked list
+    */
     public void insert(String data){
 
         Node node = new Node();
@@ -221,29 +234,6 @@ class LinkedList {
         }
 
     }
-
-
-    // Remove a node and shift all the nodes' next nodes accordingly
-    public void remove(){
-
-
-        try {
-
-            Node node = head;
-
-            while (node.next.next != null) {
-
-                node = node.next;
-            }
-            node.next = null;
-
-        } catch(Exception e) {
-
-
-        }
-
-    }
-
 
     // Check if the Linked lIst is empty
     public boolean isEmpty( ){
@@ -279,16 +269,11 @@ class LinkedList {
             System.out.println(node.data);
             node = node.next;
         }
-
-
-
     }
 
     /*
-
      Choose a random element in the Linked list and use that as
      the random word for the hangman game
-
     */
     public String chooseRandomWord(){
 
