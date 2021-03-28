@@ -6,13 +6,13 @@ Click the start button to begin
 After clicking, the game will begin in 3 seconds
 To show that the game is going, the start light underneath the start button will light up green
 If it is red then the game is not running
-The goal is to repeat the pattern that the computer plays, exactly
+The goal is to repeat the pattern that the computer plays, exactly as it is played
 If you take more than 5 seconds to click a button or that button is correct,
 then its a game over and all four buttons will flash simultaneously 5 times to 
 indicate that.
 Your all time highest score is displayed on the left,
 and your previous games score is displayed on the right
-The game is infinite and keeps on going until you lose  
+The game goes on forever, until you lose  
 Goodluck Player!
 
 */
@@ -401,7 +401,3 @@ interval -= 100;
 }
 }
 
-// OS used = Windows 10
-// Web browser used for testing = Google Chrome Version  89.0.4389.72
-// I used help on setting timeouts and intervals from W3 Schools. Link for w3 schools timeout functions = https://www.w3schools.com/jsref/met_win_settimeout.asp
-// I got the idea for using a game loop on an interval timer from freecodecamp. The video = https://www.youtube.com/watch?v=n_ec3eowFLQ
